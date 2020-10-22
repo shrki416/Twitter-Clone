@@ -1,26 +1,26 @@
 import React from "react";
+import "./Search.css";
 import SearchIcon from "@material-ui/icons/Search";
 
 function Search() {
   return (
     <div className="search">
-      <div className="search__container">
-        <input
-          className="search__container-input"
-          type="text"
-          placeholder="Search Twitter"
-        />
-        <SearchIcon />
+      <div className="search__input">
+        <input type="text" placeholder="Search Twitter" />
+        <SearchIcon fontSize="large" />
       </div>
-      <div class="tweets-list">
-        <div class="tweets-welcome-message">
-          <h5>Welcome to Twitter!</h5>
-          <p>Use the search above to see what's happening around the world.</p>
+
+      <div>
+        <div className="search__welcome-message">
+          <h4>Welcome to Twitter!</h4>
+          <h5>
+            Use the search above to see what's happening around the world.
+          </h5>
         </div>
       </div>
-      <div class="next-page-container">
-        <div id="next-page" onclick="onNextPage()">
-          <i class="fas fa-arrow-down"></i>
+      <div className="next-page-container">
+        <div id="next-page">
+          <i className="fas fa-arrow-down"></i>
         </div>
       </div>
     </div>
