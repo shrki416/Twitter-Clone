@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/shrki416/Twitter-Clone#readme",
   "dependencies": {
+    "axios": "^0.21.0",
     "concurrently": "^5.3.0",
     "cra-build-watch": "^3.2.0",
     "dotenv": "^8.2.0",
