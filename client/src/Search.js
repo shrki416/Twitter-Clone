@@ -1,12 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Search.css";
 import SearchIcon from "@material-ui/icons/Search";
 
 function Search() {
+  const [input, setInput] = useState("");
+
+  const handleChange = (e) => {
+    setInput(e.target.value);
+    console.log(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("submitted");
+    console.log(e.target.value);
+  };
+
   return (
-    <div className="search">
+    <form className="search" onSubmit={handleSubmit}>
       <div className="search__input">
-        <input type="text" placeholder="Search Twitter" />
+        <input
+          type="text"
+          placeholder="Search Twitter"
+          onChange={handleChange}
+        />
         <SearchIcon fontSize="large" />
       </div>
 
@@ -18,12 +35,10 @@ function Search() {
           </h5>
         </div>
       </div>
-      <div className="next-page-container">
-        <div id="next-page">
-          <i className="fas fa-arrow-down"></i>
-        </div>
+      <div className="search__next-page">
+        <i className="fas fa-arrow-down"></i>
       </div>
-    </div>
+    </form>
   );
 }
 
