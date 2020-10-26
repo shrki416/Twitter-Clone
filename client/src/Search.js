@@ -5,15 +5,9 @@ import SearchIcon from "@material-ui/icons/Search";
 function Search() {
   const [input, setInput] = useState("");
 
-  const handleChange = (e) => {
-    setInput(e.target.value);
-    console.log(e.target.value);
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("submitted");
-    console.log(e.target.value);
   };
 
   return (
@@ -22,7 +16,10 @@ function Search() {
         <input
           type="text"
           placeholder="Search Twitter"
-          onChange={handleChange}
+          onChange={(e) => {
+            console.log(e.target.value);
+            setInput(e.target.value);
+          }}
         />
         <SearchIcon fontSize="large" />
       </div>
