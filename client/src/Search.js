@@ -1,13 +1,21 @@
 import React, { useState } from "react";
 import "./Search.css";
 import SearchIcon from "@material-ui/icons/Search";
+import axios from "axios";
 
 function Search() {
   const [input, setInput] = useState("");
+  const [tweet, setTweet] = useState([]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("submitted");
+
+    axios
+      .get(`/tweets?q=${input}`)
+      .then((response) => setTweet(response.data))
+      .catch((error) => console.error(error));
+
+    console.log(setTweet);
   };
 
   return (
@@ -16,10 +24,7 @@ function Search() {
         <input
           type="text"
           placeholder="Search Twitter"
-          onChange={(e) => {
-            console.log(e.target.value);
-            setInput(e.target.value);
-          }}
+          onChange={(e) => setInput(e.target.value)}
         />
         <SearchIcon fontSize="large" />
       </div>
