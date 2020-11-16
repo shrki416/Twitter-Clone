@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./Search.css";
 import SearchIcon from "@material-ui/icons/Search";
 import axios from "axios";
-import Tweet from "./Tweet";
 
 function Search() {
   const [input, setInput] = useState("");
