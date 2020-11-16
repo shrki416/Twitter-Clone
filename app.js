@@ -11,10 +11,12 @@ app.use(express.static(path.join(__dirname, "client/build")));
 
 app.get("/tweets", (req, res) => {
   const { q, count } = req.query;
-
   twitter
     .get(q, count)
-    .then((response) => res.status(200).send(response.data))
+    .then((response) => {
+      res.status(200).send(response.data);
+      console.log(response.data);
+    })
     .catch((error) => res.status(400).send(error));
 });
 
