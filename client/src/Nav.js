@@ -19,6 +19,16 @@ function Nav() {
           <div className="nav__profile">
             <Avatar alt="photo" src={profileImg} />
           </div>
+          <div>Explore</div>
+          <div>Notifications</div>
+          <div>Messages</div>
+          <div>Bookmarks</div>
+          <div>Lists</div>
+          <div>Profile</div>
+          <div>More</div>
+          <div>
+            <button>Tweet</button>
+          </div>
         </nav>
       </div>
     </div>

@@ -4,9 +4,9 @@ nav {
 
 .nav {
   border-right: 1px solid #1c1c1c;
-  max-width: 100px;
-  min-width: 70px;
-  width: 20%;
+  max-width: 300px;
+  min-width: 100px;
+  width: 30%;
 }
 
 .nav__container {
