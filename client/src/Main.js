@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Tweet from "./Tweet";
 import SearchIcon from "@material-ui/icons/Search";
 import axios from "axios";
 import "./Main.css";
@@ -15,7 +16,7 @@ function Main() {
       .then((response) => setTweet(response.data))
       .catch((error) => console.error(error));
   };
-  console.log(tweet);
+
   const tweets = tweet.statuses || [];
   const tweetCard = tweets.map((tweet) => <Tweet name={tweet.user.name} />);
 

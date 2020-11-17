@@ -46,3 +46,11 @@
   display: flex;
   flex-direction: row;
 }
+
+.tweetCard {
+  background-color: #fff;
+  border: 1px solid tomato;
+  border-radius: 5px;
+  color: #000;
+  display: flex;
+}
