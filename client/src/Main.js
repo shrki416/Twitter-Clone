@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import Tweet from "./Tweet";
-import SearchIcon from "@material-ui/icons/Search";
 import axios from "axios";
-import "./Main.css";
 
 function Main() {
   const [input, setInput] = useState("");
@@ -21,32 +19,24 @@ function Main() {
   const tweetCard = tweets.map((tweet) => <Tweet name={tweet.user.name} />);
 
   return (
-    <div className="main">
-      <div className="search">
-        <form onSubmit={handleSubmit}>
-          <div className="search__input">
-            <input
-              type="text"
-              placeholder="Search Twitter"
-              onChange={(e) => setInput(e.target.value)}
-            />
-            <SearchIcon fontSize="large" />
-          </div>
+    <div>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <input
+            type="text"
+            placeholder="Search Twitter"
+            onChange={(e) => setInput(e.target.value)}
+          />
+        </div>
 
-          <div>
-            <div className="search__welcome-message">
-              <h4>Welcome to Twitter!</h4>
-              <h5>
-                Use the search above to see what's happening around the world.
-              </h5>
-            </div>
-          </div>
-          <div className="search__next-page">
-            <i className="fas fa-arrow-down"></i>
-          </div>
-        </form>
-        <div className="search__tweet">{tweetCard}</div>
-      </div>
+        <div>
+          <h4>Welcome to Twitter!</h4>
+          <h5>
+            Use the search above to see what's happening around the world.
+          </h5>
+        </div>
+      </form>
+      <div>{tweetCard}</div>
     </div>
   );
 }

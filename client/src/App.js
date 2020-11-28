@@ -1,12 +1,10 @@
 import React from "react";
-import Nav from "./Nav";
 import Main from "./Main";
-import "./App.css";
 
 function App() {
   return (
-    <div className="app">
-      <Nav />
+    <div>
+      <h1>Twitter Showcase Application</h1>
       <Main />
     </div>
   );
