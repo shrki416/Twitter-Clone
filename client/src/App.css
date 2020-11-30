@@ -23,6 +23,28 @@ body {
   grid-column-start: 1;
   background: white;
   padding: 1em;
+  line-height: 1.5;
+}
+
+.nav > h2 {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.nav-btn {
+  background-color: rgb(29, 161, 242);
+  transition-property: background-color, box-shadow;
+  transition-duration: 0.2s;
+  min-width: calc(78.89px);
+  min-height: 49px;
+  cursor: pointer;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 9999px;
+  border-color: rgba(0, 0, 0, 0);
 }
 
 .main {
