@@ -19,7 +19,7 @@ function Main() {
   const tweetCard = tweets.map((tweet) => <Tweet name={tweet.user.name} />);
 
   return (
-    <div>
+    <div className="main">
       <form onSubmit={handleSubmit}>
         <div>
           <input
